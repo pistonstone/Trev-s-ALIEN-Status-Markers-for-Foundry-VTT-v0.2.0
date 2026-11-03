@@ -1,0 +1,21 @@
+{
+  "id": "trevs-alien-status-markers",
+  "title": "Trev's ALIEN Status Markers",
+  "description": "Permanent custom visual status markers for ALIEN RPG. Includes a green Acid Splash marker.",
+  "version": "0.2.0",
+  "authors": [
+    {
+      "name": "Billy J Jackson"
+    }
+  ],
+  "compatibility": {
+    "minimum": "14",
+    "verified": "14.367",
+    "maximum": "14"
+  },
+  "esmodules": [
+    "scripts/main.js"
+  ],
+  "license": "LICENSE.txt",
+  "readme": "README.md"
+}
