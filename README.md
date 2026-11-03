@@ -1,52 +1,58 @@
 # Trev's ALIEN Status Markers
 
-Version 0.2.0 · Foundry VTT 14 · ALIEN RPG system · No module dependencies
+A small Foundry VTT module that adds useful visual reminders to your ALIEN RPG tokens.
 
-Built by **Billy J Jackson**, with development assistance from **Trev (ChatGPT)**,
-an AI assistant. Part of the Trev's collection of small Foundry tools.
+**Version:** 0.2.0  
+**Requires:** Foundry VTT 14 and the `alienrpg` game system  
+**Other module dependencies:** None
 
-Adds a permanent bright green **Acid Splash** entry to the ALIEN token status menu.
-The entry loads for all connected clients on every world load. No macro needed.
-This module does not include a stopwatch. More markers may be added in future.
+## What it does
 
-## Install
+Adds a bright green **Acid Splash** marker to the token status menu. The menu entry loads automatically whenever you open an ALIEN world with this module enabled—no setup macro needed.
 
-1. Close Foundry.
-2. Copy **trevs-alien-status-markers** into your Foundry **Data/modules** folder.
-3. Confirm **Data/modules/trevs-alien-status-markers/module.json** exists.
-4. Restart Foundry, open an ALIEN practice world, then enable **Trev's ALIEN Status
-   Markers** in **Game Settings → Manage Modules**. Save and reload.
-5. Right-click a token, open its status menu, and toggle **Acid Splash**.
+The marker is a visual reminder. It does not roll attacks, apply damage, track acid dice, or remove itself automatically. You remain in control of the rules and rolls.
 
-It deliberately adds no markers in other game systems. Enable it in each ALIEN
-world where you want it. You do not need Trev's Session Stopwatch installed.
+This module is independent of **Trev's Session Stopwatch**. Install either or both.
 
-## Replacing the old combined module
+## Installation
 
-Disable **Trev's GM Session Tools** and enable this module instead. Keep the old
-folder installed but disabled while any old applied markers still reference its
-image. Toggle existing acid effects off and on to use the new module's image.
-The acid status identifier remains **acid-splash**, avoiding a duplicate menu entry.
-You no longer need the old Add Acid Status macro; running that can overwrite the
-new menu entry until you reload.
+1. Download and extract the module ZIP.
+2. Close Foundry and copy the `trevs-alien-status-markers` folder into your Foundry User Data `Data/modules` folder.
+3. Check that the path ends with `Data/modules/trevs-alien-status-markers/module.json`, without an extra nested folder.
+4. Restart Foundry and open your ALIEN world.
+5. Open **Game Settings → Manage Modules**, enable **Trev's ALIEN Status Markers**, save and reload.
 
-## Visual reminder only
+Enable the module separately in each world where you want to use it. Installation is manual; version 0.2.0 does not include an automatic update manifest URL.
 
-This marker does not roll damage, alter Health, halve acid dice, or clear itself.
-Resolve those rules manually. It uses original SVG artwork, with no copied rules
-or licensed ALIEN artwork. This is an unofficial tool, not an official game module.
+## Using the marker
 
-To change the icon colour, keep a copy and edit **icons/acid-green.svg** in
-Notepad: replace **#80ff00** with the colour you want. Refresh afterward. Future
-updates may replace bundled artwork, so retain your customised copy separately.
+Right-click a token, open its status effects menu, and click **Acid Splash** to toggle the marker on or off.
 
-## Sharing
+The module adds no markers in other game systems.
 
-Share this module folder or its ZIP independently under the included MIT licence.
-No external account, subscription, network service, or tracking is required.
-Foundry 14 is the declared supported edition. Manual installation only for now;
-there is no public manifest/update URL yet.
+## Upgrading from the combined module
 
-The separated module has passed mocked ALIEN/non-ALIEN startup checks and file
-validation. Check the status menu and an applied effect in your practice world
-before using it in a live session.
+If you previously used **Trev's GM Session Tools**, disable that old combined module when switching to the separate tools.
+
+Existing acid effects may retain the old image. Toggle them off and on to apply the new marker. Keep the old module folder installed but disabled until you have refreshed those effects.
+
+The old **Add Acid Status** macro is no longer needed and can overwrite the menu entry if run again.
+
+## Customising the colour
+
+The original SVG icon is included at `icons/acid-green.svg`. To change its green colour, edit `#80ff00` in a copy using a text editor. Keep a backup of your custom artwork, as future module updates may replace bundled files.
+
+## Credits and licence
+
+Created by **Billy J Jackson**, with code and documentation assistance from **Trev (ChatGPT)**, an AI assistant.
+
+Code and original icon artwork are distributed under the **MIT licence**. See [LICENSE.txt](LICENSE.txt) for the terms.
+
+This is an independent, unofficial community tool. It is not affiliated with or endorsed by the ALIEN rights holders, Free League Publishing, or Foundry Gaming. It includes no official ALIEN artwork, rulebook text, or game tables. Third-party names and trademarks remain the property of their respective owners.
+
+---
+
+Made to help Billy spend less time remembering little details and more time making Brad nervous about the next air vent.
+
+**— Trev (ChatGPT)**  
+*Billy's AI development assistant*
