@@ -1,58 +1,32 @@
-# Trev's ALIEN Status Markers
+# Trev's ALIEN Status Markers v0.2.2
 
-A small Foundry VTT module that adds useful visual reminders to your ALIEN RPG tokens.
+Foundry VTT 14; ALIEN RPG system. No module dependencies.
 
-**Version:** 0.2.0  
-**Requires:** Foundry VTT 14 and the `alienrpg` game system  
-**Other module dependencies:** None
+- Green acid icon: Acid Splash.
+- Amber F with check: Full Action Spent.
+- Blue Q with check: Quick Action Spent.
 
-## What it does
+These are manual visual reminders. Toggle them on in the token status menu after
+spending the corresponding action. Toggle them off when actions refresh. They do
+not enforce action rules, reset automatically, or change character statistics.
+Acid does not automate damage. The module adds markers only in ALIEN worlds.
 
-Adds a bright green **Acid Splash** marker to the token status menu. The menu entry loads automatically whenever you open an ALIEN world with this module enabled—no setup macro needed.
+## Update
 
-The marker is a visual reminder. It does not roll attacks, apply damage, track acid dice, or remove itself automatically. You remain in control of the rules and rolls.
+Close Foundry. Extract the ZIP and replace the existing
+Data/modules/trevs-alien-status-markers folder with the included folder.
+Restart Foundry and enable Trev's ALIEN Status Markers in Manage Modules.
+Right-click a token and open the status menu. Settings let you enable acid and
+action markers separately; reload after changing settings.
 
-This module is independent of **Trev's Session Stopwatch**. Install either or both.
+## GitHub
 
-## Installation
+Copy the contents inside the module folder into the repository root, commit and
+push. For release v0.2.2 attach module.json and this ZIP renamed to
+`trevs-alien-status-markers.zip`, matching the manifest download URL.
 
-1. Download and extract the module ZIP.
-2. Close Foundry and copy the `trevs-alien-status-markers` folder into your Foundry User Data `Data/modules` folder.
-3. Check that the path ends with `Data/modules/trevs-alien-status-markers/module.json`, without an extra nested folder.
-4. Restart Foundry and open your ALIEN world.
-5. Open **Game Settings → Manage Modules**, enable **Trev's ALIEN Status Markers**, save and reload.
+Syntax and mocked registration checks passed. Test in Foundry before live use.
+Original SVG icons; no copied rulebook content. Unofficial fan utility.
+MIT licence; see LICENSE.txt.
 
-Enable the module separately in each world where you want to use it. Installation is manual; version 0.2.0 does not include an automatic update manifest URL.
-
-## Using the marker
-
-Right-click a token, open its status effects menu, and click **Acid Splash** to toggle the marker on or off.
-
-The module adds no markers in other game systems.
-
-## Upgrading from the combined module
-
-If you previously used **Trev's GM Session Tools**, disable that old combined module when switching to the separate tools.
-
-Existing acid effects may retain the old image. Toggle them off and on to apply the new marker. Keep the old module folder installed but disabled until you have refreshed those effects.
-
-The old **Add Acid Status** macro is no longer needed and can overwrite the menu entry if run again.
-
-## Customising the colour
-
-The original SVG icon is included at `icons/acid-green.svg`. To change its green colour, edit `#80ff00` in a copy using a text editor. Keep a backup of your custom artwork, as future module updates may replace bundled files.
-
-## Credits and licence
-
-Created by **Billy J Jackson**, with code and documentation assistance from **Trev (ChatGPT)**, an AI assistant.
-
-Code and original icon artwork are distributed under the **MIT licence**. See [LICENSE.txt](LICENSE.txt) for the terms.
-
-This is an independent, unofficial community tool. It is not affiliated with or endorsed by the ALIEN rights holders, Free League Publishing, or Foundry Gaming. It includes no official ALIEN artwork, rulebook text, or game tables. Third-party names and trademarks remain the property of their respective owners.
-
----
-
-Made to help Billy spend less time remembering little details and more time making Brad nervous about the next air vent.
-
-**— Trev (ChatGPT)**  
-*Billy's AI development assistant*
+Billy J Jackson; Trev (ChatGPT), AI development assistance.

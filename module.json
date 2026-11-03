@@ -1,11 +1,14 @@
 {
   "id": "trevs-alien-status-markers",
   "title": "Trev's ALIEN Status Markers",
-  "description": "Permanent custom visual status markers for ALIEN RPG. Includes a green Acid Splash marker.",
-  "version": "0.2.0",
+  "description": "Permanent visual ALIEN markers: Acid Splash, Full Action Spent and Quick Action Spent.",
+  "version": "0.2.2",
   "authors": [
     {
       "name": "Billy J Jackson"
+    },
+    {
+      "name": "Trev (ChatGPT) \u2014 AI development assistance"
     }
   ],
   "compatibility": {
@@ -17,5 +20,8 @@
     "scripts/main.js"
   ],
   "license": "LICENSE.txt",
-  "readme": "README.md"
+  "readme": "README.md",
+  "url": "https://github.com/pistonstone/trevs-alien-status-markers",
+  "manifest": "https://github.com/pistonstone/trevs-alien-status-markers/releases/latest/download/module.json",
+  "download": "https://github.com/pistonstone/trevs-alien-status-markers/releases/download/v0.2.2/trevs-alien-status-markers.zip"
 }

@@ -1,20 +1,29 @@
 const ID = "trevs-alien-status-markers";
 
 Hooks.once("init", () => {
-  game.settings.register(ID, "acidStatus", {
-    name: "Green Acid Splash marker",
-    hint: "Add a visual reminder to the ALIEN token status menu. Reload after changing.",
-    scope: "world", config: true, type: Boolean, default: true, requiresReload: true
-  });
+  for (const [key, name, hint] of [
+    ["acidStatus", "Green Acid Splash marker", "Add an Acid Splash visual reminder to the ALIEN token status menu."],
+    ["actionStatuses", "Full and Quick Action Spent markers", "Add manual action-spent reminders. Clear them yourself when actions refresh."]
+  ]) {
+    game.settings.register(ID, key, {
+      name, hint: `${hint} Reload after changing.`,
+      scope: "world", config: true, type: Boolean, default: true, requiresReload: true
+    });
+  }
 });
 
 Hooks.once("setup", () => {
-  if (game.system.id !== "alienrpg" || !game.settings.get(ID, "acidStatus")) return;
-  // Retain the existing identifier so we don't add a second acid menu entry.
-  CONFIG.statusEffects["acid-splash"] = {
-    id: "acid-splash", name: "Acid Splash",
-    img: `modules/${ID}/icons/acid-green.svg`, hud: true
+  if (game.system.id !== "alienrpg") return;
+  const add = (id, name, icon) => {
+    CONFIG.statusEffects[id] = {
+      id, name, img: `modules/${ID}/icons/${icon}.svg`, hud: true
+    };
   };
+  if (game.settings.get(ID, "acidStatus")) add("acid-splash", "Acid Splash", "acid-green");
+  if (game.settings.get(ID, "actionStatuses")) {
+    add("trevs-full-action-spent", "Full Action Spent", "full-action-spent");
+    add("trevs-quick-action-spent", "Quick Action Spent", "quick-action-spent");
+  }
 });
 
 Hooks.once("ready", () => {
